@@ -7,7 +7,7 @@ $filePath = './test.pptx';
 $open = $zip->open($filePath);
 
 if ($open === true) {
-    $slideNumber = 1; //loop through slide files
+    $slideNumber = 1;
     $doc = new DOMDocument;
     while (($xmlIndex = $zip->locateName('ppt/slides/slide' . $slideNumber . '.xml')) !== false) {
         $xmlData   = $zip->getFromIndex($xmlIndex);
