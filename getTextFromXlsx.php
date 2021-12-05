@@ -1,7 +1,5 @@
 <?php
 
-
-
 function getTextFromXlsx(string $filePath): string
 {
     $zip = new ZipArchive;
