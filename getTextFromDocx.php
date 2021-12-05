@@ -1,6 +1,7 @@
 <?php
 
-function getTextFromDocx(string $filePath) {
+function getTextFromDocx(string $filePath): string
+{
     $zip = new ZipArchive;
     $result = '';
 
@@ -16,6 +17,8 @@ function getTextFromDocx(string $filePath) {
             }
         }
     }
+
+    return $result . "\n";
 }
 
-getTextFromDocx('./test.docx');
+echo getTextFromDocx('./test.docx');
